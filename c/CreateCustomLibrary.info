@@ -1,0 +1,27 @@
+This document shows how to use create custom library in C.
+
+** STEPS **
+
+1. Create a header file. e.g. "myExampleLib.h" . Contents of this file looks like
+
+
+
+    #ifndef _my_example_lib_h      /* Include guard for library file*/
+    #define _my_example_lib_h
+    int exampleMethod(int x);      /* An example function declaration */
+    #endif                         /* End the guard*/
+
+
+2. Create the implemnetation file. e.g "myExampleLib.c" . Contents of this file looks like
+
+
+
+            #include "myExampleLib.h"  /* Include the header (not strictly necessary here) */
+
+            int foo(int x)    /* Function definition */
+            {
+                printf ("Example lib: value of x %d",x);
+            }
+
+
+3. To use this library see file "UseCustomLibrary.info"
