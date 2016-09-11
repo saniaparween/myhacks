@@ -1,11 +1,11 @@
 #include<stdio.h>
-//#include<conio.h>
 #include<stdlib.h>
+
 void create();
 void display();
 
-struct node
-{ char name[10];
+struct node{ 
+  char name[10];
   int roll;
   int marks;
   struct node *next;
@@ -22,18 +22,20 @@ void main(){
    	 printf("Enter your choice\n");
    	 scanf("%d",&ch);
 
-   switch(ch)
-	{ case 1: 
-	          create();
-		  break;
-	  case 2:
-		 display();
-		 break;
-         }
-           }
+     switch(ch){ 
+        case 1: 
+          create();
+  		    break;
+  	   case 2:
+          display();
+          break;
+      }
+    }
 }
-void create()
-{ struct node *temp, *t;
+
+
+void create(){ 
+  struct node *temp, *t;
   temp=(struct node*)malloc(sizeof(struct node));
   printf("Enter roll no.\n");
   scanf("%d",&temp->roll);
@@ -42,35 +44,23 @@ void create()
   printf("Enter the marks\n");
   scanf("%d",&temp->marks);
   temp->next=NULL;
-  	if(head==NULL)
+  if(head==NULL){
 		head=temp;
+  }
 	else{
-              t=head;
-	      while(t->next!=NULL){
+       t=head;
+	     while(t->next!=NULL){
               t=t->next;
-	      }
-	      t->next=temp;
-	    }
+	     }
+	     t->next=temp;
+	}
 }
 
-void display()
-{ struct node *t;
+void display(){ 
+  struct node *t;
   t=head;
-  while(t!=NULL)
-      { printf("Roll no.:%d\tName:%s\tMarks:%d\n",t->roll,t->name,t->marks);
-	t=t->next;
-       }
+  while(t!=NULL){ 
+    printf("Roll no.:%d\tName:%s\tMarks:%d\n",t->roll,t->name,t->marks);
+    t=t->next;
+  }
 }
-	
-
-
-               
-	  
-
-
-
-
-  
-
-
-
