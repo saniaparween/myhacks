@@ -1,0 +1,8 @@
+"SortingLib.h"
+#ifndef SortLib
+#define SortLib
+
+void InsertionSort(int Array[], int length)
+
+#endif
+

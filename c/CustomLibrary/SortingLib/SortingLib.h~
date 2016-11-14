@@ -1,0 +1,8 @@
+
+#ifndef SortLib
+#define SortLib
+
+void BubbleSort(int Array[], int Length)
+
+#endif
+
