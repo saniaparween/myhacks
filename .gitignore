@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Swap Files
+*~
+
+#irrelevant File
+*.DS_Store
